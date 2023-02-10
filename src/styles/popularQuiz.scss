@@ -1,0 +1,91 @@
+.popular-quiz {
+  margin-top: 2rem;
+  padding: 2rem 6rem;
+
+  h3 {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .quiz {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+
+    .technology {
+      background: #ffe3be;
+      line-height: 0;
+      padding: 1rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sport {
+      background: #eaeeff;
+      line-height: 0;
+      padding: 1rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .music {
+      background: #f6e5e5;
+      line-height: 0;
+      padding: 1rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .quiz-info {
+      h3 {
+        color: #333;
+        display: flex;
+        justify-content: left;
+      }
+
+      p {
+        font-family: "Nunito", sans-serif;
+        font-size: 12px;
+      }
+    }
+
+    .score {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: end;
+    }
+
+    &:last-child {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .popular-quiz {
+    padding: 0 1rem;
+
+    h3 {
+      display: block;
+    }
+
+    .quiz {
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding: 0 1rem;
+
+      .technology {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
