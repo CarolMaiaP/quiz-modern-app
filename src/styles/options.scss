@@ -1,0 +1,26 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .option {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: #fff;
+
+    .radio {
+      width: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .options {
+    .option {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.question {
+  margin-top: 2.5rem;
+  padding: 1rem 10rem;
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+
+    .previous {
+      button {
+        border: 1px solid #21bdca;
+        color: #21bdca;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #fff;
+      }
+    }
+
+    .next {
+      button {
+        background-color: #21bdca;
+        color: #fff;
+        border: none;
+        padding: 1rem 3rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .question {
+    padding: 1rem;
+    margin-top: 1rem;
+    display: block;
+  }
+}
