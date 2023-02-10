@@ -1,5 +1,6 @@
 import { DetailBrief } from "../components/DetailBrief";
 import { DetailHeader } from "../components/DetailHeader";
+import { DetailRules } from "../components/DetailRules";
 import { DetailSport } from "../components/DetailSport";
 
 export function DetailSportQuiz(){
@@ -8,6 +9,7 @@ export function DetailSportQuiz(){
       <DetailHeader />
       <DetailSport />
       <DetailBrief />
+      <DetailRules />
     </>
   )
 }
