@@ -1,0 +1,49 @@
+.detail-rules {
+  margin-top: 5rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .rules-list {
+    padding: 0 1rem;
+
+    ul {
+      li {
+        p {
+          color: #666;
+          margin-bottom: 1.5rem;
+          font-size: 1rem;
+          font-family: "Nunito", sans-serif;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .detail-rules {
+    h3 {
+      font-size: 1rem;
+    }
+    .rules-list {
+      ul {
+        li {
+          p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
