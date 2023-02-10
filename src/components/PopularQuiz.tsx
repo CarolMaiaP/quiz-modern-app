@@ -9,7 +9,7 @@ export function PopularQuiz(){
   return(
     <div className="popular-quiz">
       <h3>Popular Quiz</h3>
-      <Link to="/detail">
+      <Link to="/detail-technology">
         <div className="quiz">
           <div className='technology'>
             <img src={computer} alt="" />
