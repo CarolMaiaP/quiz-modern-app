@@ -1,0 +1,104 @@
+.recent-quiz {
+  margin-top: 2rem;
+  padding: 2rem 6rem;
+
+  h3 {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .completed-quiz {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+
+    h3 {
+      color: #333;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-family: "Nunito", sans-serif;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    .read,
+    .speak {
+      background: #fafafd;
+      padding: 3rem;
+      border-radius: 10px;
+
+      img {
+        background: #fff;
+        padding: 0.5rem;
+        border-radius: 3px;
+      }
+
+      .read-progress-bar {
+        width: 100%;
+        background: #333;
+        height: 0.5rem;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 0.7rem;
+
+        .read-completed {
+          background: #21bdca;
+          width: 65%;
+          height: 0.5rem;
+          border-radius: 10px;
+        }
+      }
+
+      .speak-progress-bar {
+        width: 100%;
+        background: #333;
+        height: 0.5rem;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 0.7rem;
+
+        .speak-completed {
+          background: #5372e7;
+          width: 85%;
+          height: 0.5rem;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .recent-quiz {
+    padding: 0 1rem;
+
+    h3 {
+      display: block;
+    }
+
+    .completed-quiz {
+      gap: 2rem;
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      .read,
+      .speak {
+        padding: 1rem;
+      }
+    }
+  }
+}
