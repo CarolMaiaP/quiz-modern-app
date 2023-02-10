@@ -41,7 +41,7 @@ export function PopularQuiz(){
         </div>
       </Link>
 
-      <Link to="/detail">
+      <Link to="/detail-music">
         <div className="quiz">
           <div className='music'>
             <img src={music} alt="" />
