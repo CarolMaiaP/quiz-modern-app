@@ -1,0 +1,33 @@
+.result {
+  background-image: url("/src/assets/background-circles.png");
+  background-color: #e1f2ff;
+  background-repeat: no-repeat;
+  background-position: right;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+
+  h3 {
+    color: #4e5c66;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    max-width: 155px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .result {
+    max-width: 85%;
+    margin-top: 0;
+  }
+}
