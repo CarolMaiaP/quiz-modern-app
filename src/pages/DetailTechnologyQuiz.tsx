@@ -2,7 +2,7 @@ import { DetailBrief } from "../components/DetailBrief";
 import { DetailHeader } from "../components/DetailHeader";
 import { DetailRules } from "../components/DetailRules";
 import { DetailTechnology } from "../components/DetailTechnology";
-import { StartQuizButton } from "../components/StartQuizButton";
+import { StartTechnologyQuizButton } from "../components/StartTechnologyQuizButton";
 
 export function DetailTechnologyQuiz(){
   return(
@@ -11,7 +11,7 @@ export function DetailTechnologyQuiz(){
       <DetailTechnology />
       <DetailBrief />
       <DetailRules />
-      <StartQuizButton />
+      <StartTechnologyQuizButton />
     </>
   )
 }
