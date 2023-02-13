@@ -12,7 +12,39 @@
     background: #fff;
 
     .radio {
-      width: 20px;
+      cursor: pointer;
+      display: none;
+
+      &:checked + label::before {
+        content: "\0078";
+        color: #333;
+        font-size: 15px;
+        text-align: center;
+        line-height: 18px;
+      }
+    }
+
+    label {
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      padding-left: 2.5rem;
+
+      &::before {
+        content: "";
+        display: inline-block;
+
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+
+        margin-right: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        background-color: #fff;
+        border: 2px solid #d4d4d4;
+      }
     }
   }
 }
