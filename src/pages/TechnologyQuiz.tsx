@@ -1,4 +1,4 @@
-import { Question } from "../components/Question";
+import { TechnologyQuestion } from "../components/TechnologyQuestion";
 import { QuizTechnologyHeader } from "../components/QuizTechnologyHeader";
 import { TechnologyProgressBar } from "../components/TechnologyProgressBar";
 
@@ -7,7 +7,7 @@ export function TecnologyQuiz(){
     <>
       <QuizTechnologyHeader />
       <TechnologyProgressBar />
-      <Question />
+      <TechnologyQuestion />
     </>
   )
 }
