@@ -10,6 +10,11 @@
     border: 1px solid transparent;
     border-radius: 10px;
     background: #fff;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #dadada;
+    }
 
     .radio {
       cursor: pointer;
@@ -44,6 +49,46 @@
         bottom: 1px;
         background-color: #fff;
         border: 2px solid #d4d4d4;
+      }
+    }
+  }
+
+  .blocked {
+    label {
+      pointer-events: none;
+    }
+  }
+
+  .correct {
+    border: 1px solid #219653;
+
+    .radio {
+      &:checked + label::before {
+        content: "\0078";
+        color: #fff;
+      }
+    }
+
+    label {
+      &::before {
+        background-color: #219653;
+      }
+    }
+  }
+
+  .wrong {
+    background-color: #f6e5e5;
+
+    .radio {
+      &:checked + label::before {
+        content: "\0078";
+        color: #fff;
+      }
+    }
+
+    label {
+      &::before {
+        background-color: #ff6967;
       }
     }
   }
