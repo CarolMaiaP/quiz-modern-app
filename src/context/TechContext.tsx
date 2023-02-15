@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer} from "react";
 import questions from '../data/techQuestion'
 
 const STAGES = ["start", "playing", "end"]
