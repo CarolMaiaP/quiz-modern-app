@@ -7,7 +7,8 @@ import { QuizOver } from './QuizOver';
 export function TechnologyQuestion(){
   const [quizState, dispatch]:any = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestion]
-  
+  const option = quizState.questions[quizState.currentQuestion]
+
   return(
     <>
       {!currentQuestion ?
@@ -21,7 +22,8 @@ export function TechnologyQuestion(){
           <div className="actions">
             {quizState.currentQuestion > 0 && 
             <div className="previous">
-              <button onClick={() => dispatch({ type: "PREVIOUS_QUESTION" })}>Previous</button>
+              <button onClick={() => dispatch({ type: "PREVIOUS_QUESTION",
+                payload: {answer: currentQuestion.answer, option}})}>Previous</button>
             </div>
             }
             

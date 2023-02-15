@@ -4,7 +4,7 @@ import sportQuestions from '../data/sportQuestion'
 import musicQuestions from '../data/musicQuestion'
 
 const STAGES = ["start", "playing", "end"]
-let questions = sportQuestions || techQuestions
+let questions = sportQuestions || techQuestions || musicQuestions
 
 const initialState = {
   gameStage: STAGES[0],
@@ -60,10 +60,14 @@ function quizReducer(state:any, action:any) {
 
     case "PREVIOUS_QUESTION":
       const previousQuestion = state.currentQuestion - 1;
+      const previousAnswer = action.payload.answer;
+
+      console.log("previosanwer",previousAnswer)
 
       return{
         ...state,
-        currentQuestion: previousQuestion
+        currentQuestion: previousQuestion,
+        answerSelected: previousAnswer,
       };
 
     case  "CHECK_ANSWER":
