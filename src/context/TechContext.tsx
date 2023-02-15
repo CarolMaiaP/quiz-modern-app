@@ -1,6 +1,7 @@
 import { createContext, useReducer} from "react";
 import techQuestions from '../data/techQuestion'
 import sportQuestions from '../data/sportQuestion'
+import musicQuestions from '../data/musicQuestion'
 
 const STAGES = ["start", "playing", "end"]
 let questions = sportQuestions || techQuestions
@@ -24,14 +25,29 @@ function quizReducer(state:any, action:any) {
     case "TECH_QUIZ":
       return{
         ...state,
+        answerSelected: false,
+        currentQuestion: 0,
+        score: 0,
         questions: techQuestions,
       };
 
     case "SPORT_QUIZ":
       return{
         ...state,
+        answerSelected: false,
+        currentQuestion: 0,
+        score: 0,
         questions: sportQuestions,
       };
+
+    case "MUSIC_QUIZ":
+    return{
+      ...state,
+      answerSelected: false,
+      currentQuestion: 0,
+      score: 0,
+      questions: musicQuestions,
+    }; 
 
     case "NEXT_QUESTION":
       const nextQuestion = state.currentQuestion + 1;
