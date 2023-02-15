@@ -3,6 +3,7 @@ import { DetailMusicQuiz } from "./pages/DetailMusicQuiz"
 import { DetailSportQuiz } from "./pages/DetailSportQuiz"
 import { DetailTechnologyQuiz } from "./pages/DetailTechnologyQuiz"
 import { Home } from "./pages/Home"
+import { MusicQuiz } from "./pages/MusicQuiz"
 import { SportQuiz } from "./pages/SportQuiz"
 import { TecnologyQuiz } from "./pages/TechnologyQuiz"
 import './styles/global.scss'
@@ -19,6 +20,7 @@ function App() {
           <Route path="/detail-music" element={<DetailMusicQuiz />} />
           <Route path="/technology-quiz" element={<TecnologyQuiz />} />
           <Route path="/sport-quiz" element={<SportQuiz />} />
+          <Route path="/music-quiz" element={<MusicQuiz />} />
         </Routes>
       </Router>
     </div>
