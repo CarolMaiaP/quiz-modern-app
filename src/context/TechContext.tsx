@@ -1,7 +1,9 @@
 import { createContext, useReducer} from "react";
-import questions from '../data/techQuestion'
+import techQuestions from '../data/techQuestion'
+import sportQuestions from '../data/sportQuestion'
 
 const STAGES = ["start", "playing", "end"]
+let questions = sportQuestions || techQuestions
 
 const initialState = {
   gameStage: STAGES[0],
@@ -16,7 +18,19 @@ function quizReducer(state:any, action:any) {
     case "CHANGE_STATE":
       return {
         ...state,
-        gameStage: STAGES[1]
+        gameStage: STAGES[1],
+      };
+
+    case "TECH_QUIZ":
+      return{
+        ...state,
+        questions: techQuestions,
+      };
+
+    case "SPORT_QUIZ":
+      return{
+        ...state,
+        questions: sportQuestions,
       };
 
     case "NEXT_QUESTION":
