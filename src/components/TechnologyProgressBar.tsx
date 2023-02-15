@@ -8,8 +8,6 @@ export function TechnologyProgressBar(){
   const totalQuestions = quizState.questions.length
   const completedPercentage = currentQuestion > 0 ? Math.round((currentQuestion / totalQuestions ) * 100) : 0
 
-  console.log("aquiiii", completedPercentage)
-
   return(
     <div className="progress-bar-contain">
       <div className="tecnology-progress-bar">

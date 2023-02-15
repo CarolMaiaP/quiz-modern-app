@@ -7,9 +7,7 @@ import { QuizOver } from './QuizOver';
 export function TechnologyQuestion(){
   const [quizState, dispatch]:any = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestion]
-
-  console.log(quizState.currentQuestion)
-
+  
   return(
     <>
       {!currentQuestion ?

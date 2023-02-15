@@ -7,8 +7,6 @@ export function OptionsQuiz(){
   const currentQuestion = quizState.questions[quizState.currentQuestion]
   const answer = currentQuestion.answer
 
-  console.log(quizState.score)
-
   function handleSelectOption(option:any){
     dispatch({
       type: "CHECK_ANSWER",
