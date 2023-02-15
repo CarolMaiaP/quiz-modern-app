@@ -5,7 +5,6 @@ import { QuizContext } from '../context/TechContext';
 
 export function StartTechnologyQuizButton(){
   const [quizState, dispatch]:any = useContext(QuizContext);
-  const [ quizCategory, setQuizCategory ] = useState('sport' || 'technology')
 
   return(
     <div className="start-button">
