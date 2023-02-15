@@ -17,7 +17,7 @@ export function TechnologyProgressBar(){
 
         </div>
       </div>
-      <p>Completed: {completedPercentage}</p>
+      <p>Completed: {completedPercentage}%</p>
     </div>
   )
 }
