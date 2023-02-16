@@ -4,7 +4,7 @@ import '../styles/options.scss'
 
 
 export function OptionsQuiz(){
-  const [quizState, dispatch]:any = useContext(QuizContext);
+  const [quizState, dispatch] = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestion]
   const answer = currentQuestion.answer
 

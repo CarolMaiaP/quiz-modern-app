@@ -4,8 +4,7 @@ import { useContext } from 'react';
 import { QuizContext } from '../context/TechContext';
 
 export function StartSportQuizButton(){
-  const [quizState, dispatch]:any = useContext(QuizContext);
-
+  const [, dispatch] = useContext(QuizContext);
 
   return(
     <div className="start-button">

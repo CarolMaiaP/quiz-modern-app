@@ -3,7 +3,7 @@ import { QuizContext } from '../context/TechContext';
 import '../styles/tecnologyProgressBar.scss'
 
 export function TechnologyProgressBar(){
-  const [quizState, dispatch]:any = useContext(QuizContext);
+  const [quizState]:any = useContext(QuizContext);
   const currentQuestion = quizState.currentQuestion
   const totalQuestions = quizState.questions.length
   const completedPercentage = currentQuestion > 0 ? Math.round((currentQuestion / totalQuestions ) * 100) : 0
