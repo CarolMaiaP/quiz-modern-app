@@ -1,13 +1,14 @@
-import { useContext } from 'react';
+import { useContext, Dispatch } from 'react';
 import { QuizContext } from '../context/TechContext';
 import '../styles/options.scss'
+
 
 export function OptionsQuiz(){
   const [quizState, dispatch]:any = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestion]
   const answer = currentQuestion.answer
 
-  function handleSelectOption(option:any){
+  function handleSelectOption(option:string){
     dispatch({
       type: "CHECK_ANSWER",
       payload: {answer: currentQuestion.answer, option}
@@ -16,7 +17,7 @@ export function OptionsQuiz(){
 
   return(
     <div className="options">
-      {currentQuestion.options.map((option:any) => {
+      {currentQuestion.options.map((option:string) => {
         return(
         <div className={
           `option 
