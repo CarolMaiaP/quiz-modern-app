@@ -1,4 +1,4 @@
-import { createContext, useReducer} from "react";
+import { createContext, ReactNode, Reducer, useReducer} from "react";
 import techQuestions from '../data/techQuestion'
 import sportQuestions from '../data/sportQuestion'
 import musicQuestions from '../data/musicQuestion'
@@ -6,7 +6,7 @@ import musicQuestions from '../data/musicQuestion'
 const STAGES = ["start", "playing", "end"]
 let questions = sportQuestions || techQuestions || musicQuestions
 
-const initialState = {
+const initialState:StateProps = {
   gameStage: STAGES[0],
   questions,
   currentQuestion: 0,
@@ -14,7 +14,24 @@ const initialState = {
   score: 0,
 }
 
-function quizReducer(state:any, action:any) {
+export interface StateProps{
+  gameStage: string;
+  questions: {
+      question: string;
+      options: string[];
+      answer: string;
+  }[];
+  currentQuestion: number;
+  answerSelected: string | boolean | undefined;
+  score: number;
+}
+
+export interface Action{
+  type: string;
+  payload?: { answer?: string, option?: string}
+}
+
+function quizReducer(state:StateProps, action:Action) {
   switch(action.type){
     case "CHANGE_STATE":
       return {
@@ -60,7 +77,7 @@ function quizReducer(state:any, action:any) {
 
     case "PREVIOUS_QUESTION":
       const previousQuestion = state.currentQuestion - 1;
-      const previousAnswer = action.payload.answer;
+      const previousAnswer = action.payload?.answer;
 
       console.log("previosanwer",previousAnswer)
 
@@ -73,8 +90,8 @@ function quizReducer(state:any, action:any) {
     case  "CHECK_ANSWER":
       if(state.answerSelected) return state;
 
-      const answer = action.payload.answer
-      const option = action.payload.option
+      const answer = action.payload?.answer
+      const option = action.payload?.option
       let correctAnswer = 0 
 
       if(answer === option) correctAnswer = 1;
@@ -90,10 +107,16 @@ function quizReducer(state:any, action:any) {
   }
 }
 
-export const QuizContext = createContext({});
+export const QuizContext = createContext<[StateProps, React.Dispatch<Action>]>([initialState, () => null]);
 
-export function QuizProvider ({ children }:any) {
-  const value = useReducer(quizReducer, initialState)
+
+interface childrenProps{
+  children: ReactNode
+}
+
+
+export function QuizProvider ({ children }:childrenProps) {
+  const value = useReducer<Reducer<StateProps, Action>>(quizReducer, initialState)
 
   return(
     <QuizContext.Provider value={value}>
